@@ -6,9 +6,11 @@ var childproc = require('child_process');
 var request = require('request');
 
 
-describe('lalala', function() {
+describe('Recording requests', function() {
     this.timeout(60000);
     var child = null;
+
+    // fire up a node js express example app
     before(function(done) {
         child = childproc.spawn('node', ['example/app.js']);
         child.stdout.on('data', function (data) {
@@ -34,6 +36,7 @@ describe('lalala', function() {
         }, 5000);
     });
 
+    // hit some endpoints
     it('/', function(done) {
         request('http://localhost:3000', function(err, r, b) {
             assert.ok(!err, 'error found');
@@ -53,6 +56,7 @@ describe('lalala', function() {
         });
     });
 
+    // kill example nodejs app
     after(function() {
         child.kill('SIGHUP');
     });

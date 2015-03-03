@@ -1,5 +1,5 @@
 {
-  "name": "loadmeter",
+  "name": "express-traffic",
   "version": "1.0.0",
   "description": "Traffic logger for ExpressJS to collect time based load information about on eendpoints.",
   "main": "index.js",
