@@ -1,7 +1,7 @@
 {
   "name": "loadmeter",
   "version": "0.0.1",
-  "description": "Traffic logger for ExpressJS to collect time based load information about on eendpoints.",
+  "description": "Traffic logger for ExpressJS to collect time based load information on endpoints.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
