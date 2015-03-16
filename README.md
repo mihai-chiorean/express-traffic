@@ -22,8 +22,8 @@ Sample output:
         "status":200,          // HTTP status code
         "ep":"/delay/:time",   // endpoint
         "late":1004,           // latency
+        "len":17,              // request length
         "meta":{               // endpoint specific data
-            "len":17,          // request length
             "time":"1000"      // the "time" parameter in the endpoint path
         }
      }
