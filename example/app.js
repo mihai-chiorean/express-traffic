@@ -1,12 +1,16 @@
 var express = require('express');
 var app = express();
 
-//
+// this logger prints requests to STDOUT
 var logger = require('./../lib/traffic-tracker').logger({out: 'stdout'});
+
+// this one saves the data to mongodb
 var loggerMongo = require('./../lib/traffic-tracker').logger({out: 'mongodb', config:{url: 'localhost'}});
 
+// used both loggers
 app.use(logger);
 app.use(loggerMongo);
+
 app.get('/', function (req, res) {
     res.send('Hello World!')
 });
